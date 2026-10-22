@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore weather in Kazakhstan's cities.">
+    <title>Weather App | Explore the Weather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">🌤️ Weather App</a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cities">Cities</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <span class="hero-label">Welcome to Weather App</span>
+                <h1>Explore the Weather Around You</h1>
+                <p>
+                    Discover weather conditions in different cities.
+                    Stay informed and plan your day with our weather app.
+                </p>
+                <a href="#cities" class="btn btn-white">
+                    Explore Cities
+                </a>
+            </div>
+        </section>
+
+        <!-- WEATHER CARDS -->
+        <section id="cities" class="section cities-section">
+            <div class="container">
+                <h2>Weather in Popular Cities</h2>
+                <p class="section-description">
+                    Explore weather conditions across Kazakhstan.
+                </p>
+
+                <div class="weather-grid">
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Partly cloudy">🌤️</div>
+                        <h3>Astana</h3>
+                        <p class="temperature">+18°C</p>
+                        <p class="condition">Partly Cloudy</p>
+                        <div class="weather-details">
+                            <span>💧 65%</span>
+                            <span>💨 12 km/h</span>
+                        </div>
+                    </article>
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Sunny">☀️</div>
+                        <h3>Almaty</h3>
+                        <p class="temperature">+22°C</p>
+                        <p class="condition">Sunny</p>
+                        <div class="weather-details">
+                            <span>💧 50%</span>
+                            <span>💨 8 km/h</span>
+                        </div>
+                    </article>
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Cloudy">☁️</div>
+                        <h3>Shymkent</h3>
+                        <p class="temperature">+25°C</p>
+                        <p class="condition">Cloudy</p>
+                        <div class="weather-details">
+                            <span>💧 45%</span>
+                            <span>💨 10 km/h</span>
+                        </div>
+                    </article>
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Sunny">☀️</div>
+                        <h3>Aktau</h3>
+                        <p class="temperature">+20°C</p>
+                        <p class="condition">Sunny</p>
+                        <div class="weather-details">
+                            <span>💧 55%</span>
+                            <span>💨 15 km/h</span>
+                        </div>
+                    </article>
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Rainy">🌧️</div>
+                        <h3>Karaganda</h3>
+                        <p class="temperature">+14°C</p>
+                        <p class="condition">Rainy</p>
+                        <div class="weather-details">
+                            <span>💧 78%</span>
+                            <span>💨 18 km/h</span>
+                        </div>
+                    </article>
+
+                    <article class="weather-card">
+                        <div class="weather-icon" role="img" aria-label="Cloudy">☁️</div>
+                        <h3>Atyrau</h3>
+                        <p class="temperature">+19°C</p>
+                        <p class="condition">Cloudy</p>
+                        <div class="weather-details">
+                            <span>💧 60%</span>
+                            <span>💨 11 km/h</span>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="data-note">
+                    Weather information is sample data for demonstration.
+                </p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container about-content">
+                <div>
+                    <h2>About Weather App</h2>
+                    <p>
+                        Weather App is a simple website designed
+                        to display weather information for different cities.
+                    </p>
+                    <p>
+                        Our goal is to make weather information easy
+                        to understand with a clean and friendly design.
+                    </p>
+                    <p>
+                        In future stages, we plan to add city search,
+                        interactive features, and real-time weather data.
+                    </p>
+                </div>
+                <div class="about-icon" role="img" aria-label="Weather illustration">
+                    🌍☀️
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="section-description">
+                    Have a question? Send us a message!
+                </p>
+
+                <form class="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message"
+                              rows="5"
+                              placeholder="Write your message" required></textarea>
+
+                    <button type="button" class="btn btn-blue">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>🌤️ Weather App</p>
+            <p>© 2026 Weather App. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
