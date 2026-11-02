@@ -4,137 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore weather in Kazakhstan's cities.">
+    <meta name="description" content="Explore sample weather information for cities in Kazakhstan.">
     <title>Weather App | Explore the Weather</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="container nav-container">
-            <a href="#home" class="logo">🌤️ Weather App</a>
+        <div class="container header__inner">
+            <a class="header__logo" href="#home">🌤️ Weather App</a>
 
-            <nav aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#cities">Cities</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <!-- CSS-only mobile menu -->
+            <input
+                class="header__toggle"
+                type="checkbox"
+                id="menu-toggle"
+                aria-label="Show or hide navigation"
+            >
+
+            <label class="header__burger" for="menu-toggle">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="visually-hidden">Toggle navigation menu</span>
+            </label>
+
+            <nav class="header__nav" aria-label="Main navigation">
+                <ul class="header__links">
+                    <li><a class="header__link" href="#home">Home</a></li>
+                    <li><a class="header__link" href="#cities">Cities</a></li>
+                    <li><a class="header__link" href="#about">About</a></li>
+                    <li><a class="header__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section id="home" class="hero">
-            <div class="container hero-content">
-                <span class="hero-label">Welcome to Weather App</span>
-                <h1>Explore the Weather Around You</h1>
-                <p>
+            <div class="container hero__content">
+                <span class="hero__label">Welcome to Weather App</span>
+                <h1 class="hero__title">Explore the Weather Around You</h1>
+                <p class="hero__description">
                     Discover weather conditions in different cities.
                     Stay informed and plan your day with our weather app.
                 </p>
-                <a href="#cities" class="btn btn-white">
+                <a class="button button--light" href="#cities">
                     Explore Cities
                 </a>
             </div>
         </section>
 
         <!-- WEATHER CARDS -->
-        <section id="cities" class="section cities-section">
+        <section id="cities" class="section cities">
             <div class="container">
-                <h2>Weather in Popular Cities</h2>
-                <p class="section-description">
+                <h2 class="section__title">Weather in Popular Cities</h2>
+                <p class="section__description">
                     Explore weather conditions across Kazakhstan.
                 </p>
 
-                <div class="weather-grid">
+                <div class="cities__grid">
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Partly cloudy">🌤️</div>
-                        <h3>Astana</h3>
-                        <p class="temperature">+18°C</p>
-                        <p class="condition">Partly Cloudy</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Partly cloudy">🌤️</div>
+                        <h3 class="weather-card__title">Astana</h3>
+                        <p class="weather-card__temperature">+18°C</p>
+                        <p class="weather-card__condition">Partly Cloudy</p>
+                        <div class="weather-card__details">
                             <span>💧 65%</span>
                             <span>💨 12 km/h</span>
                         </div>
                     </article>
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Sunny">☀️</div>
-                        <h3>Almaty</h3>
-                        <p class="temperature">+22°C</p>
-                        <p class="condition">Sunny</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Sunny">☀️</div>
+                        <h3 class="weather-card__title">Almaty</h3>
+                        <p class="weather-card__temperature">+22°C</p>
+                        <p class="weather-card__condition">Sunny</p>
+                        <div class="weather-card__details">
                             <span>💧 50%</span>
                             <span>💨 8 km/h</span>
                         </div>
                     </article>
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Cloudy">☁️</div>
-                        <h3>Shymkent</h3>
-                        <p class="temperature">+25°C</p>
-                        <p class="condition">Cloudy</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Cloudy">☁️</div>
+                        <h3 class="weather-card__title">Shymkent</h3>
+                        <p class="weather-card__temperature">+25°C</p>
+                        <p class="weather-card__condition">Cloudy</p>
+                        <div class="weather-card__details">
                             <span>💧 45%</span>
                             <span>💨 10 km/h</span>
                         </div>
                     </article>
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Sunny">☀️</div>
-                        <h3>Aktau</h3>
-                        <p class="temperature">+20°C</p>
-                        <p class="condition">Sunny</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Sunny">☀️</div>
+                        <h3 class="weather-card__title">Aktau</h3>
+                        <p class="weather-card__temperature">+20°C</p>
+                        <p class="weather-card__condition">Sunny</p>
+                        <div class="weather-card__details">
                             <span>💧 55%</span>
                             <span>💨 15 km/h</span>
                         </div>
                     </article>
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Rainy">🌧️</div>
-                        <h3>Karaganda</h3>
-                        <p class="temperature">+14°C</p>
-                        <p class="condition">Rainy</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Rainy">🌧️</div>
+                        <h3 class="weather-card__title">Karaganda</h3>
+                        <p class="weather-card__temperature">+14°C</p>
+                        <p class="weather-card__condition">Rainy</p>
+                        <div class="weather-card__details">
                             <span>💧 78%</span>
                             <span>💨 18 km/h</span>
                         </div>
                     </article>
 
                     <article class="weather-card">
-                        <div class="weather-icon" role="img" aria-label="Cloudy">☁️</div>
-                        <h3>Atyrau</h3>
-                        <p class="temperature">+19°C</p>
-                        <p class="condition">Cloudy</p>
-                        <div class="weather-details">
+                        <div class="weather-card__icon" role="img" aria-label="Cloudy">☁️</div>
+                        <h3 class="weather-card__title">Atyrau</h3>
+                        <p class="weather-card__temperature">+19°C</p>
+                        <p class="weather-card__condition">Cloudy</p>
+                        <div class="weather-card__details">
                             <span>💧 60%</span>
                             <span>💨 11 km/h</span>
                         </div>
                     </article>
 
                 </div>
-                <p class="data-note">
+
+                <p class="cities__note">
                     Weather information is sample data for demonstration.
                 </p>
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="section about-section">
-            <div class="container about-content">
-                <div>
-                    <h2>About Weather App</h2>
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="container about__content">
+                <div class="about__text">
+                    <h2 class="section__title section__title--left">
+                        About Weather App
+                    </h2>
                     <p>
                         Weather App is a simple website designed
                         to display weather information for different cities.
@@ -148,35 +165,35 @@
                         interactive features, and real-time weather data.
                     </p>
                 </div>
-                <div class="about-icon" role="img" aria-label="Weather illustration">
+                <div class="about__icon" role="img" aria-label="Weather illustration">
                     🌍☀️
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="section contact-section">
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p class="section-description">
+                <h2 class="section__title">Contact Us</h2>
+                <p class="section__description">
                     Have a question? Send us a message!
                 </p>
 
-                <form class="contact-form">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name"
-                           placeholder="Enter your name" required>
+                <form class="contact__form">
+                    <label class="contact__label" for="name">Your Name</label>
+                    <input class="contact__input" id="name" name="name"
+                           type="text" placeholder="Enter your name" required>
 
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="Enter your email" required>
+                    <label class="contact__label" for="email">Your Email</label>
+                    <input class="contact__input" id="email" name="email"
+                           type="email" placeholder="Enter your email" required>
 
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message"
-                              rows="5"
+                    <label class="contact__label" for="message">Your Message</label>
+                    <textarea class="contact__input contact__input--message"
+                              id="message" name="message" rows="5"
                               placeholder="Write your message" required></textarea>
 
-                    <button type="button" class="btn btn-blue">
+                    <button class="button button--primary" type="button">
                         Send Message
                     </button>
                 </form>
@@ -186,9 +203,11 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>🌤️ Weather App</p>
-            <p>© 2026 Weather App. All rights reserved.</p>
+        <div class="container footer__content">
+            <p class="footer__logo">🌤️ Weather App</p>
+            <p class="footer__copyright">
+                © 2026 Weather App. All rights reserved.
+            </p>
         </div>
     </footer>
 
